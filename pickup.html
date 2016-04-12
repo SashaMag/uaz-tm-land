@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Спецпредложения: УАЗ Пикап</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css_land/style.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+
+    <div id="wrapper">
+        <div id="header" class="container">
+            <div id="logo">
+                <a href="/"><img src="/images/logo2.png" alt="ТоргМаш Уаз" title="ТоргМаш уаз" width="371" height="84" />
+                </a>
+            </div>
+
+        </div>
+        <!--                               <div id="menu">
+                                               <ul>
+                                                   <li class="news"><a href="/novosti.html">Новости</a><li class="special-offer"><a href="/specpredlozhenija.html" title="спецпредложения">Спецпредложения</a></li><li class="tuning"><a href="/tjuning.html" title="тюнинг">Тюнинг</a></li><li class="shop"><a href="/avtokatalog-zapchastej/" title="магазин запчастей">Магазин запчастей</a></li><li class="obratnaya-svyaz"><a href="/kontakty-i-shema-proezda/obratnaja-svjaz.html" title="обратная связь">Обратная связь</a></li><li class="contacts"><a href="/kontakty-i-shema-proezda.html" title="контакты">Контакты</a></li>
+                                               </ul>
+                                           </div>
+            -->
+    </div>
+
+
+
+
+
+    <div class="toblur">
+        <input type="checkbox" class="hidden-checkbox" id="special-offer-prices">
+        <input type="checkbox" class="hidden-checkbox" id="special-offer-in-stock">
+        <input type="checkbox" class="hidden-checkbox">
+        <input type="checkbox" class="hidden-checkbox">
+        <input type="checkbox" class="hidden-checkbox">
+        <div class="special-offer-new">
+            <div class="special__banner-block"><img src="img/pickup-land.jpg" alt="">
+            </div>
+            <div class="special-offer__btn-block">
+
+                <label class="special-offer__label-pagination" for="special-offer-prices" onclick="scrollToAnchor('special-offer__prices-block');"><span class="btn btn-1">Комплектации<br> и цены</span>
+                </label>
+
+                <label class="special-offer__label-pagination" for="special-offer-in-stock" onclick="scrollToAnchor('special-offer__in-stock');"><span class="btn btn-3">Автомобили <br>в наличии</span>
+                </label>
+
+                <div class="btn btn-4 popbutton" data-window="special-offer-buy-form-popup" onclick="typeOfReq(0);"><span class="btn-span btn-span-4">Запрос на <br>покупку</span>
+                </div>
+
+                <div class="btn btn-6 popbutton" data-window="special-offer-buy-form-popup" onclick="typeOfReq(1);"><span class="btn-span btn-span-6">Трейд-ин /<br>Утилизация</span>
+                </div>
+
+                <div class="btn btn-7 popbutton" data-window="special-offer-buy-form-popup" onclick="typeOfReq(2);"><span class="btn-span btn-span-7">Запрос на<br>кредит</span>
+                </div>
+
+                <div class="btn btn-5 popbutton" data-window="special-offer-test-drive-popup" onclick="typeOfReq(3);"><span class="btn-span btn-span-5">Запишись на<br>тест-драйв</span>
+                </div>
+
+                <div class="btn btn-2 popbutton" data-window="special-offer-recall-popup" onclick="typeOfReq(4);">Заказать
+                    <br> звонок</div>
+
+
+            </div>
+            <h1>Скидка 275 000 рублей!</h1>
+
+            <p>Только до <strong>30 апреля 2016 года.</strong> при покупке УАЗ ПИКАП в автосалонах Торгмаш вы можете получить скидку <strong>275 000 рублей!</strong>
+            </p>
+            <p>Скидка <strong>105 000 рублей</strong> за год выпуска автомобиля.</p>
+            <p>Скидка <strong>50 000 рублей</strong> по программе "УАЗ-кредит"</p>
+            <p>Скидка <strong>120 000 рублей</strong> по спецпрограмме утилизация/трейд-ин.</p>
+            <p><i>*Срок действия программы — с 23 ноября до 30 апреля 2016 года.</i>
+            </p>
+            <hr>
+
+            <div>
+
+                <form class="special-offer-buy-form" name="trade-in-form">
+          <h3 style="text-align:center">Получите лучшее предложение!</h3><br>
+          <span>Ваше имя</span>
+          <br>
+          <input type="text" id="trade-in-form__name"  placeholder="Фамилия, имя, отчество" name="Имя">
+          <br>
+          <span>Ваш телефон</span>
+          <br>
+          <input type="text" id="trade-in-form__phone" placeholder="Телефон" name="Телефон" class="required-phone">
+          <br>
+          <span>Электронная почта</span>
+          <br>
+          <input type="text" id="trade-in-form__mail" required placeholder="Электронная почта"  class="required-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email">
+          
+                    <select class="special-offer-buy-form__select-complectation_tradein" name="Пикап, комплектация">
+
+                        <option class="option-complectation-pickup" value="Выберите комплектацию">Выберите комплектацию</option>
+                        <option class="option-complectation-pickup" value="Классик">Пикап Классик — 784 000 руб.</option>
+                        <option class="option-complectation-pickup" value="Комфорт">Пикап Комфорт — 854 990 руб.</option>
+                        <option class="option-complectation-pickup" value="Лимитед">Пикап Лимитед — 924 990 руб.</option>
+                        <!-- <option class="option-complectation-pickup" value="23638-249-01 Comfort">Пикап 23638-249-01 Comfort  — 954990 руб.</option> -->
+                        <option class="option-complectation-pickup" value="Лимитед Дизель">Пикап Лимитед Дизель — 1004990 руб.</option>
+                    </select>
+          <br>
+
+          <input type="radio"  name="Покупатель" id="trade-in-form-physical" value="физическое лицо">
+          <label for="trade-in-form-physical">Физическое лицо</label>
+          <input type="radio" name="Покупатель" id="trade-in-form-entity" value="Юридическое лицо">
+          <label for="trade-in-form-entity">Юридическое лицо</label>
+          <br>
+          <br>
+          <span>Способ покупки</span>
+          <br>
+          <br>
+
+          <input type="radio"  name="Способ покупки" value="Наличные" id="trade-in-cash">
+          <label>За наличные</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="radio" name="Способ покупки" value="Кредит" id="trade-in-credit">
+          <label>В кредит</label>
+          <br><br>
+
+
+          <span>Желаете ли сдать авто в качестве первого взноса?</span>
+          <select name="Утилизация или трейд-ин" id="sell-car-type">
+            <option value="Без сдачи авто" id="select-no-sell">Без сдачи авто</option>
+            <option value="Утилизация" id="select-utilization">Утилизация</option>
+            <option value="трейд-ин" id="select-trade-in">Трейд-ин</option>
+          </select>
+
+        <div class="trade-in-block-utilization">
+
+          <span>Марка/модель сдаваемого авто</span>
+          <br>
+          <input type="text" id="trade-in-form__model-car" placeholder="Марка/модель сдаваемого авто" name="Сдаваемое авто">
+          <br>
+
+          <span>Год выпуска сдаваемого авто</span>
+          <br>
+          <input type="text" id="trade-in-form__year-of-issue" placeholder="Год выпуска" name="Год выпуска">
+          <br>
+
+          <span>Пробег сдаваемого авто</span>
+          <br>
+          <input type="text" id="trade-in-form__mileage" placeholder="Пробег" name="Пробег">
+          <br>
+
+          <textarea name="Описание сдаваемого авто" id="sell-car__description" placeholder="Описание сдаваемого авто"></textarea>
+
+          </div>
+
+          <span>Выберите автосалон</span>
+          <br>
+          <br>
+          <input type="radio"  name="Автосалон" id="trade-in-form-88km"   value="88 км МКАД">
+          <label for="trade-in-form-88km">88км МКАД</label>
+          <input type="radio" name="Автосалон" id="trade-in-form-mariino" value="Марьино">
+          <label for="trade-in-form-mariino">ул. Иловайская, 2Б</label>
+          <button type="button" onclick="sendgetbest_main('лучшее предложение', 'special-offer-buy-form-popup'); requiredMail()" class="button-submit">Отправить</button>
+        </form>
+
+            </div>
+
+            <a name="special-offer__prices-block"></a>
+            <div class="special-offer__prices-block">
+
+
+                <!-- <hr> -->
+
+                <!-- compl -->
+
+            </div>
+
+            <a name="special-offer__in-stock"></a>
+            <div class="special-offer__in-stock">
+
+                <!-- здесь будет таблица с автомобилями в наличии отсюда http://www.uaz-torgmash.ru/uaz-patriot/avtomobili-v-nalichii.html
+                    <hr> 
+                    -->
+
+
+            </div>
+<!--             <div class="explanation-block">
+                <p>По условиям программы, при покупке внедорожника УАЗ Пикап в любой комплектации в период с 23 ноября до 31 декабря 2015 года, покупателю предоставляется бесплатная расширенная гарантия на автомобиль общим сроком 5 лет или 120 000 км пробега в зависимости от того, что наступит ранее.</p>
+                <p>Начиная с 2016 года, расширенная гарантия на автомобили семейства УАЗ Пикап будет введена в качестве сервисной опции за дополнительную плату. Стандартная гарантия на автомобили УАЗ составляет 3 года или 100 000 км пробега.</p>
+                <p>Наряду с увеличением гарантии, до 31 декабря 2015 года действуют выгодные спецпрограммы на приобретение УАЗ Пикап. При покупке автомобиля в кредит, предоставляется скидка в размере 50 000 рублей, которая может быть суммирована с дополнительными скидками по программам утилизации и «трейд-ин».</p>
+                <p>В программе участвует ограниченное количество автомобилей УАЗ.</p>
+            </div> -->
+
+
+
+        </div>
+    </div>
+
+
+
+
+    <div id="special-offer-recall-popup" class="popwindow" data-title="" data-height="">
+    <form class="special-offer-buy-form  special-offer-recall-form" name="special-offer-recall">
+      <!-- name="special-offer-recall-form" -->
+      <h3>Закажите звонок и получите ответы на свои вопросы!</h3>
+      <br>
+      <span>Ваш телефон</span>
+      <br>
+      <input type="text" id="recall-phone" placeholder="Телефон" name="Телефон, обратный звонок" required>
+      <br>
+      <span>Желаемое время звонка</span>
+      <br>
+      <input type="text" id="time_recall-phone" placeholder="Время звонка" name="Время обратного звонка">
+      <button type="button" onclick="sendgetbest('заказ звонка','special-offer-recall-popup')">Заказать звонок</button>
+    </form>
+  </div>
+
+  <div id="special-offer-test-drive-popup" class="popwindow" data-title="" data-height="">
+    <form class="special-offer-buy-form special-offer-test-drive-form" name="special-offer-test-drive-form">
+      <h3>Форма записи на тест-драйв</h3>
+      <br>
+      <span>Ваше имя</span>
+      <br>
+      <input type="text" id="name_test_drive" name="Имя" placeholder="Фамилия, имя, отчество">
+      <br>
+      <span>Контактный телефон</span>
+      <br>
+      <input type="text" id="phone_test_drive" name="Телефон, тест-драйв" required placeholder="Ваш телефон">
+      <br>
+      <span>Желаемое время тест-драйва</span>
+      <br>
+      <input type="text" id="time_test_drive" placeholder="Время тест-драйва" name="Время тест-драйва">
+      
+            <br><br>
+                
+                &nbsp; Выберите автосалон <br>
+                <input id="special-offer-buy-form-88km" type="radio" value="88 км" name="Сервисный центр">
+                <label for="special-offer-buy-form-88km">88км МКАД</label>
+                <input id="special-offer-buy-form-mariino" type="radio" value="Марьино" name="Сервисный центр">
+                <label for="special-offer-buy-form-mariino">ул. Иловайская, 2Б</label>
+                
+                
+      <button type="button" onclick="sendgetbest('тест-драйв', 'special-offer-test-drive-popup')">Отправить запрос</button>
+    </form>
+  </div>
+
+  <div id="special-offer-buy-form-popup" class="popwindow">
+    <form class="special-offer-buy-form" name="special-offer-buy-form">
+      <h3 style="text-align:center">Получите лучшее предложение!</h3>
+
+      <input type="text" id="special-offer-buy-form__name" placeholder="Фамилия, имя, отчество" name="Имя">
+      <br>
+
+      <input type="text" id="special-offer-buy-form__phone" placeholder="Телефон" name="Телефон"  class="required-phone">
+      <br>
+
+      <input type="text" id="special-offer-buy-form__mail" placeholder="Электронная почта"  class="required-mail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email">
+      <br>
+      <br>
+
+      <input type="radio"  name="Покупатель" id="special-offer-form-physical" value="физическое лицо">
+      <label for="special-offer-form-physical">Физическое лицо</label>&nbsp;
+      <input type="radio" name="Покупатель" id="special-offer-form-entity" value="Юридическое лицо">
+      <label for="special-offer-form-entity">Юридическое лицо</label>
+      <br><br>
+      <span>Способ покупки</span>
+      <br>
+      <br>
+
+      <input type="radio"  name="Способ покупки" value="Наличные" id="cash">
+      <label>За наличные</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="radio" name="Способ покупки" value="Кредит" id="credit">
+      <label>В кредит</label>
+      <br>
+            <select class="special-offer-buy-form__select-complectation_" name="Пикап, желаемая модель">
+
+                <option class="option-complectation-pickup" value="Выберите комплектацию">Выберите комплектацию</option>
+                <option class="option-complectation-pickup" value="Классик">Пикап Классик — 784 000 руб.</option>
+                        <option class="option-complectation-pickup" value="Комфорт">Пикап Комфорт — 854 990 руб.</option>
+                        <option class="option-complectation-pickup" value="Лимитед">Пикап Лимитед — 924 990 руб.</option>
+                        <!-- <option class="option-complectation-pickup" value="23638-249-01 Comfort">Пикап 23638-249-01 Comfort  — 954990 руб.</option> -->
+                        <option class="option-complectation-pickup" value="Лимитед Дизель">Пикап Лимитед Дизель — 1004990 руб.</option>
+            </select>
+      <br>
+
+
+      <span>Желаете ли сдать свой автомобиль в качестве первого взноса?</span>
+      <br>
+      <br>
+      <input type="radio"  name="Утилизация или трейд-ин" value="Нет"><span>Не желаю</span>
+      <input type="radio" name="Утилизация или трейд-ин" value="Трейд-ин"><span>Trade-in</span>
+      <input type="radio" name="Утилизация или трейд-ин" value="Утилизация"><span>Утилизация</span>
+      <br>
+      <br>
+      <span>Выберите автосалон</span>
+      <br>
+      <br>
+      <input type="radio"  name="Сервисный центр" id="special-offer-buy-form-88km" value="88 км МКАД">
+      <label for="special-offer-buy-form-88km">88км МКАД</label>
+      <input type="radio" name="Сервисный центр" id="special-offer-buy-form-mariino" value="Марьино">
+      <label for="special-offer-buy-form-mariino">ул. Иловайская, 2Б</label>
+      <button type="button" onclick="sendgetbest('лучшее предложение', 'special-offer-buy-form-popup'); requiredMail()">Отправить</button>
+    </form>
+  </div>
+    <!--
+                <select  class="special-offer-buy-form__select-complectation" >
+                    <option>Выберите комплектацию</option>
+                    <option class="option-complectation-patriot" value="classic-petrol">Классик бензин — 729 000 руб.</option>
+                    <option class="option-complectation-patriot" value="comfort-petrol">Комфорт бензин — 829 990 руб.</option>
+                    <option class="option-complectation-patriot" value="trophy-petrol">Трофи бензин — 859 990 руб.</option>
+                    <option class="option-complectation-patriot" value="expedition-petrol">Экспедишн бензин — 889 990 руб.</option>
+                    <option class="option-complectation-patriot" value="limited-petrol">Лимитед бензин — 899 990 руб.</option>
+                    <option class="option-complectation-patriot" value="unlimited-petrol">Анлимитед бензин — 929 990 руб.</option>
+                    <option class="option-complectation-patriot" value="limited-diesel">Лимитед дизель — 999 990 руб.</option>
+
+                    <option class="option-complectation-pickup" value="classic">Классик — 784 000 руб.</option>
+                    <option class="option-complectation-pickup" value="comfort">Комфорт — 854 990 руб.</option>
+                    <option class="option-complectation-pickup" value="limited">Лимитед — 924 990 руб.</option>
+                    <option class="option-complectation-pickup" value="comfeort-2363-249-01">23638-249-01 Comfort  — 954990 руб.</option>
+                    <option class="option-complectation-pickup" value="limited-diesel">Лимитед Дизель — 1024990 руб.</option>
+
+                    <option class="option-complectation-hunter" value="classic">Классик — 549000 руб.</option>
+                    <option class="option-complectation-hunter" value="victory">Победная серия — 599990 руб.</option>
+                    <option class="option-complectation-hunter" value="trophy">Трофи  — 599990 руб.</option>
+
+                    <option class="option-complectation-cargo" value="prom">Промтоварный — 754990 руб.</option>
+                    <option class="option-complectation-cargo" value="food-cargo">Продовольственный фургон  — 774990 руб.</option>
+                    <option class="option-complectation-cargo" value="prom-comfort">Промтоварный Комфорт — 814990 руб.</option>
+                    <option class="option-complectation-cargo" value="food-cargo-comfort">Продовольственный фургон комфорт — 834990 руб.</option>
+
+                    <option class="option-complectation-commerce" value="commerce">От 400 000 рублей</option>
+
+                </select><br>
+-->
+
+
+
+    <div id="footer" style="margin-top: 20px">
+        <div style="padding: 10px;">
+            <a href="/uaz-hunter/review.html" title="Хантер">Хантер</a> | <a href="/uaz-patriot.html" title="Патриот">Патриот</a> | <a href="/uaz-pikap.html" title="Пикап">Пикап</a> | <a href="/zapchasti-uaz.html" title="Запчасти">Запчасти</a> | <a href="/tehobsluzhivanie.html" title="Ремонт">Ремонт</a> | <a href="/tjuning.html" title="Тюнинг">Тюнинг</a> | <a href="/o-kompanii.html" title="О компании">О компании</a> | <a href="/novosti.html" title="Новости">Новости</a>
+            <div class="copy">
+
+                Бесплатно по России и с сотовых телефонов <span style="font-weight: bold">8-800-775-69-59</span>
+                <br> © 2001-2015 Торгмаш — официальный дилер УАЗ
+
+
+
+                <div style="float: right; padding-right: 190px;font-size: 25px;margin-top:-15px;">
+                    <!--src="/images/phone_uaz.gif" alt="Телефон официального дилера УАЗ"-->
+                    (495) 230-77-55
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $.get("/templates/auto/price_landing.php?car=201", function(data) {
+
+            $(".special-offer__prices-block").append(data);
+        });
+
+        $.get("/templates/auto/stock_landing.php?car=UAZ  PICKUP", function(data) {
+
+            $(".special-offer__in-stock").append(data);
+        });
+    </script>
+
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+<!--#include virtual="/templates/counters.tpl" -->
+
+</html>
