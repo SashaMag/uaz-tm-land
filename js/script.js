@@ -439,3 +439,46 @@ function  typeOfReq(req) {
     console.log(req);
 }
 // end
+
+(function() {
+
+    var hashHash = window.location.hash.substr(1);
+    var complectationButton = document.querySelector('.btn-1');
+    var utilizationButton = document.querySelector('.btn-span-6');
+    var creditButton = document.querySelector('.btn-span-7');
+
+    switch (hashHash) {
+
+        case 'complectation':   
+
+            function complectationClick() {
+                complectationButton.click()
+            }
+            setTimeout(complectationClick, 500)
+
+            break;
+
+        case 'utilization':          
+
+            function utilizationClick() {
+                utilizationButton.click();
+              }  
+            setTimeout(utilizationClick, 500)
+
+            break;
+
+        case 'credit':       
+
+            function creditClick() {
+                creditButton.click();
+            }     
+            setTimeout(creditClick, 500)
+            break;
+
+        default:
+            // statements_def
+            break;
+    }
+
+})();
+
