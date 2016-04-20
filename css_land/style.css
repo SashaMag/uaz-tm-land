@@ -1,0 +1,231 @@
+.hidden-checkbox {
+	display: none;
+}
+
+.special-offer-new, 
+.container {
+	width: 997px;
+	margin: 0 auto;
+	font-family: "Roboto";
+}
+
+.special-offer-new p {
+	line-height: 1em;
+}
+
+.special__banner-block {
+	margin-bottom: 15px;
+}
+
+.special__banner-block img {
+	width: 100%;
+}
+
+.special-offer-buy-form {
+	width: 380px;
+	margin: 0 auto;
+}
+
+.special-offer-buy-form  input[type="text"],
+.special-offer-buy-form  select,
+.special-offer-buy-form  textarea,
+.special-offer-buy-form  button {
+	width: 100%;
+	box-sizing: border-box;
+	margin: 10px 0;
+	padding: 7px;
+	outline: none;
+	border: none;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.special-offer-test-drive-form input[type="text"],
+.special-offer-recall-form input[type="text"] {
+	padding: 15px;
+	font-size: 20px;
+}
+
+.special-offer-buy-form textarea {
+	height: 100px;
+}
+
+.special-offer-buy-form button[type="button"] {
+	border: none;
+	outline: none;
+	background: #0a2f81 !important;
+	color: white;
+	padding: 15px;
+	margin-top: 25px;	
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 17px;
+	cursor: pointer;
+}
+
+.special-offer-buy-form button[type="button"]:hover {
+	background: #017 !important;
+	color: #fff !important;
+}
+
+.special-offer-buy-form h3 {
+	margin: 0 auto 0;
+}
+
+.special-offer-new .btn {
+	display: inline-block;
+	width: 13%;
+	vertical-align: top;
+	margin-right: 8px;
+	height: 50px;
+	box-sizing:border-box;
+	font-size: 12px;
+	text-transform: uppercase;
+	background-color: #0a2f81;
+	color: white;
+	text-align: center;
+	padding-top: 10px;
+	cursor: pointer;
+	border-radius: 4px;
+	font-family: "RobotoBold";
+}
+
+.special-offer-new .btn:hover {
+	background-color: #017;
+}
+
+.special-offer-new .btn:last-child {
+	margin-right: 0;
+}
+
+.special-offer__label-pagination {
+	margin-right: 8px;
+}
+
+.special-offer__prices-block,
+.special-offer__in-stock {
+	height: 0;
+	overflow: hidden;
+	font-size: 0;
+	transition: all .3s;
+}
+
+#special-offer-prices:checked ~ .special-offer-new .special-offer__prices-block,
+#special-offer-in-stock:checked ~ .special-offer-new .special-offer__in-stock {
+	height: auto;
+	font-size: 1em;
+	overflow: visible;
+	transition: all .3s;	
+}
+
+.explanation-block {
+	font-size: 14px;
+}
+
+.special-offer-buy-form__select-complectation option:not(:first-child) {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.popwindow {
+	font-family: "Roboto";
+}
+
+.box_window{
+  width:400px;
+  display: none; 
+  position:fixed;
+  top:5%;
+  left:50%;
+  margin-left:-200px;
+  z-index:11;
+  background: #fff;
+  display:none;
+  padding:20px;
+  border-radius: 5px;
+}
+.box_window_in {
+  position: relative;
+  overflow-y:auto;
+}
+.box_title {
+  position: absolute;
+  left: 0px;
+  top: -30px;
+  color: #fff;
+}
+.bw_close{
+  position:absolute;
+  top: -25px;
+  font-size: 10px;
+  color: #fff;
+  right:0px;
+  cursor:pointer;
+  z-index: 2;
+}
+.mask{
+  position:fixed;
+  background:rgba(0, 0, 0, 0.38);
+  display:none;
+  height:100%;
+  width: 100%;
+  z-index:10;
+}
+.to_blur.blur {
+ -webkit-filter: blur(10px);
+ -moz-filter: blur(10px);
+ -o-filter: blur(10px);
+ -ms-filter: blur(10px);
+ filter: blur(10px);
+}
+
+
+#wrapper {
+	padding: 30px !important;
+}
+
+table.price td {
+	font-size: 15px !important;
+}
+
+table.price tbody tr td:first-child {
+	width: 35%;
+}
+
+table.price tr:nth-child(3) {
+	background-color: #b02e34;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+table.price tr:nth-child(3) td {
+	color: #fff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.trade-in-block-utilization {
+	display: none;
+}
