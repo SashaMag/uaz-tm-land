@@ -430,12 +430,17 @@ function uniqq() {
 
 // start
 var typeOfRequest;
-//                                  0                               1                          2                    3                     4                                       
-var typeOfOrder = new Array("Заявка на приобритение", "Заявка на Утилизацию/трейд-ин", "Заявка на кредит", "Запрос на тест-драйв", "Запрос звонка");
+var dataForMetric = new Array('clickNivaLandingBuyCarPopUp', 'clickNivaLandingTreidInUtilPopUp', 'clickNivaLandingCreditPopUp', 'clickNivaLandingTestDrivePopUp', 'clickNivaCollBackPopUp')
+//                    clickNivaLandingBuyCarPopUp       clickNivaLandingTreidInUtilPopUp   clickNivaLandingCreditPopUp    clickNivaLandingTestDrivePopUp     clickNivaCollBackPopUp
+//                                  0                               1                                   2                                3                        4
+var typeOfOrder =   new Array("Заявка на приобритение",   "Заявка на Утилизацию/трейд-ин",      "Заявка на кредит",            "Запрос на тест-драйв",         "Запрос звонка");
 function  typeOfReq(req) {
 
     typeOfRequest = typeOfOrder[req];
 
+    //
+
+    yaCounter3979114.reachGoal(dataForMetric[req]);
     //console.log(req);
 }
 // end
