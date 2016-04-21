@@ -436,7 +436,7 @@ function  typeOfReq(req) {
 
     typeOfRequest = typeOfOrder[req];
 
-    console.log(req);
+    //console.log(req);
 }
 // end
 
