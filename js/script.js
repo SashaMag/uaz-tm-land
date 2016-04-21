@@ -440,7 +440,7 @@ function  typeOfReq(req) {
 
     //
 
-    yaCounter3979114.reachGoal(dataForMetric[req]);
+    yaCounter7291771.reachGoal(dataForMetric[req]);
     //console.log(req);
 }
 // end
