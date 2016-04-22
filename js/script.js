@@ -20,9 +20,14 @@
             windowobject.parent(".box_window").prepend("<div class='bw_close'>Закрыть</div>");
 
             windowobject.parent(".box_window").prepend("<div class='box_title'>" + wintitle + "</div>");
-            windowobject.parent(".box_window").css({'width': winwidth, 'height': winheight, 'margin-left': '-' + winmargin})
+            windowobject.parent(".box_window").css({
+                'width': winwidth,
+                'height': winheight,
+                'margin-left': '-' + winmargin
+            })
             windowobject.css({'height': winheight})
         }
+
         if (popwindow.length) {
             preparewindow(popwindow);
             popbutton.click(function () {
@@ -43,7 +48,6 @@
 })(jQuery);
 
 
-
 $('.special-offer-buy-form__select-model').on('change', function () {
 
     $('.special-offer-buy-form__select-complectation').prop('selectedIndex', 0);
@@ -59,7 +63,6 @@ $('.special-offer-buy-form__select-model').on('change', function () {
 });
 
 
-
 jQuery(function ($) {
     $("#phone_test_drive").mask("+7 (999) 999-9999");
     $("#special-offer-buy-form__phone").mask("+7 (999) 999-9999");
@@ -68,33 +71,33 @@ jQuery(function ($) {
 });
 
 
-var sourceHash = window.location.hash;
-
-console.log(sourceHash);
-
-var ex = document.referrer; //
-
-//console.log(ex);
-
-searchSource();
-
-function searchSource(){
-    
-    $.ajax({
-        url: '/files/landing/source.php',
-        type: "POST",
-        //async: false,
-        cache: false,
-        data: {
-            ref: ex
-        },
-        success: function () {
-
-            //$('#' + container).html('Сообщение отправлено!');
-
-        }
-    });
-}
+//var sourceHash = window.location.hash;
+//
+//console.log(sourceHash);
+//
+//var ex = document.referrer; //
+//
+////console.log(ex);
+//
+//searchSource();
+//
+//function searchSource(){
+//
+//    $.ajax({
+//        url: '/files/landing/source.php',
+//        type: "POST",
+//        //async: false,
+//        cache: false,
+//        data: {
+//            ref: ex
+//        },
+//        success: function () {
+//
+//            //$('#' + container).html('Сообщение отправлено!');
+//
+//        }
+//    });
+//}
 
 $('#sell-car-type').on('change', function () {
     if ($('#sell-car-type').val() == 'Утилизация' || $('#sell-car-type').val() == 'трейд-ин') {
@@ -106,7 +109,6 @@ $('#sell-car-type').on('change', function () {
 });
 
 
-
 function requiredMail() {
     if ($('.required-phone').val().length === 17) {
         $('.required-mail').removeAttr('required');
@@ -116,12 +118,10 @@ function requiredMail() {
 ;
 
 
-
 function scrollToAnchor(aid) {
     var aTag = $("a[name='" + aid + "']");
     $('html,body').animate({scrollTop: aTag.offset().top}, 'slow');
 }
-
 
 
 function sendgetbest(about, container) {
@@ -163,6 +163,12 @@ function sendgetbest(about, container) {
             alert('Ваша заявка успешно отправлена.' + "\n\n" + 'Номер ' + uniq);
 
             $(':input').val('');
+
+            //metric Niva
+            if ($(location).attr('href') == 'http://torgmash-avto.ru/files/landing/che-niva.html') {
+
+                yaCounter7291771.reachGoal(NivaDataForMetricSend[req]);
+            }
         }
     });
 
@@ -206,6 +212,12 @@ function sendgetbest_main(about, container) { // sendUtilTradein
             alert('Ваша заявка успешно отправлена.' + "\n\n" + 'Номер ' + uniq);
 
             $(':input').val('');
+
+            //metric Niva
+            if ($(location).attr('href') == 'http://torgmash-avto.ru/files/landing/che-niva.html') {
+
+                yaCounter7291771.reachGoal('clickNivaLandingBuyCarPopUp');
+            }
         }
     });
 
@@ -251,16 +263,16 @@ function uniqq() {
             var range;
             if (0 !== this.length && !this.is(":hidden"))
                 return "number" == typeof begin ? (end = "number" == typeof end ? end : begin,
-                        this.each(function () {
-                            this.setSelectionRange ? this.setSelectionRange(begin, end) : this.createTextRange && (range = this.createTextRange(),
-                                    range.collapse(!0), range.moveEnd("character", end), range.moveStart("character", begin),
-                                    range.select());
-                        })) : (this[0].setSelectionRange ? (begin = this[0].selectionStart, end = this[0].selectionEnd) : document.selection && document.selection.createRange && (range = document.selection.createRange(),
-                        begin = 0 - range.duplicate().moveStart("character", -1e5), end = begin + range.text.length),
-                        {
-                            begin: begin,
-                            end: end
-                        });
+                    this.each(function () {
+                        this.setSelectionRange ? this.setSelectionRange(begin, end) : this.createTextRange && (range = this.createTextRange(),
+                            range.collapse(!0), range.moveEnd("character", end), range.moveStart("character", begin),
+                            range.select());
+                    })) : (this[0].setSelectionRange ? (begin = this[0].selectionStart, end = this[0].selectionEnd) : document.selection && document.selection.createRange && (range = document.selection.createRange(),
+                    begin = 0 - range.duplicate().moveStart("character", -1e5), end = begin + range.text.length),
+                {
+                    begin: begin,
+                    end: end
+                });
         },
         unmask: function () {
             return this.trigger("unmask");
@@ -277,10 +289,10 @@ function uniqq() {
                 placeholder: $.mask.placeholder,
                 completed: null
             }, settings), defs = $.mask.definitions, tests = [], partialPosition = len = mask.length,
-                    firstNonMaskPos = null, $.each(mask.split(""), function (i, c) {
-                        "?" == c ? (len--, partialPosition = i) : defs[c] ? (tests.push(new RegExp(defs[c])),
-                                null === firstNonMaskPos && (firstNonMaskPos = tests.length - 1), partialPosition > i && (lastRequiredNonMaskPos = tests.length - 1)) : tests.push(null);
-                    }), this.trigger("unmask").each(function () {
+                firstNonMaskPos = null, $.each(mask.split(""), function (i, c) {
+                "?" == c ? (len--, partialPosition = i) : defs[c] ? (tests.push(new RegExp(defs[c])),
+                null === firstNonMaskPos && (firstNonMaskPos = tests.length - 1), partialPosition > i && (lastRequiredNonMaskPos = tests.length - 1)) : tests.push(null);
+            }), this.trigger("unmask").each(function () {
                 function tryFireCompleted() {
                     if (settings.completed) {
                         for (var i = firstNonMaskPos; lastRequiredNonMaskPos >= i; i++)
@@ -289,19 +301,23 @@ function uniqq() {
                         settings.completed.call(input);
                     }
                 }
+
                 function getPlaceholder(i) {
                     return settings.placeholder.charAt(i < settings.placeholder.length ? i : 0);
                 }
+
                 function seekNext(pos) {
-                    for (; ++pos < len && !tests[pos]; )
+                    for (; ++pos < len && !tests[pos];)
                         ;
                     return pos;
                 }
+
                 function seekPrev(pos) {
-                    for (; --pos >= 0 && !tests[pos]; )
+                    for (; --pos >= 0 && !tests[pos];)
                         ;
                     return pos;
                 }
+
                 function shiftL(begin, end) {
                     var i, j;
                     if (!(0 > begin)) {
@@ -314,6 +330,7 @@ function uniqq() {
                         writeBuffer(), input.caret(Math.max(firstNonMaskPos, begin));
                     }
                 }
+
                 function shiftR(pos) {
                     var i, c, j, t;
                     for (i = pos, c = getPlaceholder(pos); len > i; i++)
@@ -323,35 +340,39 @@ function uniqq() {
                             c = t;
                         }
                 }
+
                 function androidInputEvent() {
                     var curVal = input.val(), pos = input.caret();
                     if (oldVal && oldVal.length && oldVal.length > curVal.length) {
-                        for (checkVal(!0); pos.begin > 0 && !tests[pos.begin - 1]; )
+                        for (checkVal(!0); pos.begin > 0 && !tests[pos.begin - 1];)
                             pos.begin--;
                         if (0 === pos.begin)
-                            for (; pos.begin < firstNonMaskPos && !tests[pos.begin]; )
+                            for (; pos.begin < firstNonMaskPos && !tests[pos.begin];)
                                 pos.begin++;
                         input.caret(pos.begin, pos.begin);
                     } else {
-                        for (checkVal(!0); pos.begin < len && !tests[pos.begin]; )
+                        for (checkVal(!0); pos.begin < len && !tests[pos.begin];)
                             pos.begin++;
                         input.caret(pos.begin, pos.begin);
                     }
                     tryFireCompleted();
                 }
+
                 function blurEvent() {
                     checkVal(), input.val() != focusText && input.change();
                 }
+
                 function keydownEvent(e) {
                     if (!input.prop("readonly")) {
                         var pos, begin, end, k = e.which || e.keyCode;
                         oldVal = input.val(), 8 === k || 46 === k || iPhone && 127 === k ? (pos = input.caret(),
-                                begin = pos.begin, end = pos.end, end - begin === 0 && (begin = 46 !== k ? seekPrev(begin) : end = seekNext(begin - 1),
-                                        end = 46 === k ? seekNext(end) : end), clearBuffer(begin, end), shiftL(begin, end - 1),
-                                e.preventDefault()) : 13 === k ? blurEvent.call(this, e) : 27 === k && (input.val(focusText),
-                                input.caret(0, checkVal()), e.preventDefault());
+                            begin = pos.begin, end = pos.end, end - begin === 0 && (begin = 46 !== k ? seekPrev(begin) : end = seekNext(begin - 1),
+                            end = 46 === k ? seekNext(end) : end), clearBuffer(begin, end), shiftL(begin, end - 1),
+                            e.preventDefault()) : 13 === k ? blurEvent.call(this, e) : 27 === k && (input.val(focusText),
+                            input.caret(0, checkVal()), e.preventDefault());
                     }
                 }
+
                 function keypressEvent(e) {
                     if (!input.prop("readonly")) {
                         var p, c, next, k = e.which || e.keyCode, pos = input.caret();
@@ -371,19 +392,22 @@ function uniqq() {
                         }
                     }
                 }
+
                 function clearBuffer(start, end) {
                     var i;
                     for (i = start; end > i && len > i; i++)
                         tests[i] && (buffer[i] = getPlaceholder(i));
                 }
+
                 function writeBuffer() {
                     input.val(buffer.join(""));
                 }
+
                 function checkVal(allow) {
                     var i, c, pos, test = input.val(), lastMatch = -1;
                     for (i = 0, pos = 0; len > i; i++)
                         if (tests[i]) {
-                            for (buffer[i] = getPlaceholder(i); pos++ < test.length; )
+                            for (buffer[i] = getPlaceholder(i); pos++ < test.length;)
                                 if (c = test.charAt(pos - 1),
                                         tests[i].test(c)) {
                                     buffer[i] = c, lastMatch = i;
@@ -396,9 +420,10 @@ function uniqq() {
                         } else
                             buffer[i] === test.charAt(pos) && pos++, partialPosition > i && (lastMatch = i);
                     return allow ? writeBuffer() : partialPosition > lastMatch + 1 ? settings.autoclear || buffer.join("") === defaultBuffer ? (input.val() && input.val(""),
-                            clearBuffer(0, len)) : writeBuffer() : (writeBuffer(), input.val(input.val().substring(0, lastMatch + 1))),
-                            partialPosition ? i : firstNonMaskPos;
+                        clearBuffer(0, len)) : writeBuffer() : (writeBuffer(), input.val(input.val().substring(0, lastMatch + 1))),
+                        partialPosition ? i : firstNonMaskPos;
                 }
+
                 var input = $(this), buffer = $.map(mask.split(""), function (c, i) {
                     return "?" != c ? defs[c] ? getPlaceholder(i) : c : void 0;
                 }), defaultBuffer = buffer.join(""), focusText = input.val();
@@ -422,7 +447,7 @@ function uniqq() {
                         input.caret(pos), tryFireCompleted();
                     }, 0);
                 }), chrome && android && input.off("input.mask").on("input.mask", androidInputEvent),
-                        checkVal();
+                    checkVal();
             });
         }
     });
@@ -430,22 +455,28 @@ function uniqq() {
 
 // start
 var typeOfRequest;
-var dataForMetric = new Array('clickNivaLandingBuyCarPopUp', 'clickNivaLandingTreidInUtilPopUp', 'clickNivaLandingCreditPopUp', 'clickNivaLandingTestDrivePopUp', 'clickNivaCollBackPopUp')
-//                    clickNivaLandingBuyCarPopUp       clickNivaLandingTreidInUtilPopUp   clickNivaLandingCreditPopUp    clickNivaLandingTestDrivePopUp     clickNivaCollBackPopUp
+var NivaDataForMetricSend =  new Array('clickNivaLandingBuyCarSend', 'clickNivaLandingTreidInUtilSend', 'clickNivaLandingCreditSend', 'clickNivaLandingTestDriveSend', 'clickNivaCollBackSend');
+var NivaDataForMetricPopup = new Array('clickNivaLandingBuyCarPopUp', 'clickNivaLandingTreidInUtilPopUp', 'clickNivaLandingCreditPopUp', 'clickNivaLandingTestDrivePopUp', 'clickNivaCollBackPopUp')
+//                       clickNivaLandingBuyCarPopUp       clickNivaLandingTreidInUtilPopUp   clickNivaLandingCreditPopUp    clickNivaLandingTestDrivePopUp     clickNivaCollBackPopUp
 //                                  0                               1                                   2                                3                        4
-var typeOfOrder =   new Array("Заявка на приобритение",   "Заявка на Утилизацию/трейд-ин",      "Заявка на кредит",            "Запрос на тест-драйв",         "Запрос звонка");
-function  typeOfReq(req) {
+var typeOfOrder = new Array("Заявка на приобритение", "Заявка на Утилизацию/трейд-ин", "Заявка на кредит", "Запрос на тест-драйв", "Запрос звонка");
+function typeOfReq(req) {
 
     typeOfRequest = typeOfOrder[req];
 
-    //
+    //metric Niva
+    if ($(location).attr('href') == 'http://torgmash-avto.ru/files/landing/che-niva.html') {
 
-    yaCounter7291771.reachGoal(dataForMetric[req]);
+        yaCounter7291771.reachGoal(NivaDataForMetricPopup[req]);
+    }
+
+    console.log($(location).attr('href'))
+
     //console.log(req);
 }
 // end
 
-(function() {
+(function () {
 
     var hashHash = window.location.hash.substr(1);
     var complectationButton = document.querySelector('.btn-1');
@@ -454,29 +485,32 @@ function  typeOfReq(req) {
 
     switch (hashHash) {
 
-        case 'complectation':   
+        case 'complectation':
 
-            function complectationClick() {
-                complectationButton.click()
-            }
+        function complectationClick() {
+            complectationButton.click()
+        }
+
             setTimeout(complectationClick, 500)
 
             break;
 
-        case 'utilization':          
+        case 'utilization':
 
-            function utilizationClick() {
-                utilizationButton.click();
-              }  
+        function utilizationClick() {
+            utilizationButton.click();
+        }
+
             setTimeout(utilizationClick, 500)
 
             break;
 
-        case 'credit':       
+        case 'credit':
 
-            function creditClick() {
-                creditButton.click();
-            }     
+        function creditClick() {
+            creditButton.click();
+        }
+
             setTimeout(creditClick, 500)
             break;
 
