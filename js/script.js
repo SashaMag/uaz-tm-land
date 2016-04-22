@@ -470,8 +470,6 @@ function typeOfReq(req) {
         yaCounter7291771.reachGoal(NivaDataForMetricPopup[req]);
     }
 
-    console.log($(location).attr('href'))
-
     //console.log(req);
 }
 // end
