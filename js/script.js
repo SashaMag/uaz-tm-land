@@ -165,7 +165,7 @@ function sendgetbest(about, container) {
             $(':input').val('');
 
             //metric Niva
-            if ($(location).attr('href') == 'http://torgmash-avto.ru/files/landing/che-niva.html') {
+            if (location.protocol + '//' + location.host + location.pathname == 'http://torgmash-avto.ru/files/landing/che-niva.html') {
 
                 yaCounter7291771.reachGoal(NivaDataForMetricSend[req]);
             }
@@ -214,7 +214,7 @@ function sendgetbest_main(about, container) { // sendUtilTradein
             $(':input').val('');
 
             //metric Niva
-            if ($(location).attr('href') == 'http://torgmash-avto.ru/files/landing/che-niva.html') {
+            if (location.protocol + '//' + location.host + location.pathname == 'http://torgmash-avto.ru/files/landing/che-niva.html') {
 
                 yaCounter7291771.reachGoal('clickNivaLandingBuyCarPopUp');
             }
@@ -465,12 +465,12 @@ function typeOfReq(req) {
     typeOfRequest = typeOfOrder[req];
 
     //metric Niva
-    if ($(location).attr('href') == 'http://torgmash-avto.ru/files/landing/che-niva.html') {
+    if (location.protocol + '//' + location.host + location.pathname == 'http://torgmash-avto.ru/files/landing/che-niva.html') {
 
         yaCounter7291771.reachGoal(NivaDataForMetricPopup[req]);
     }
 
-
+    //console.log(location.protocol + '//' + location.host + location.pathname);
     //console.log(req);
 }
 // end
