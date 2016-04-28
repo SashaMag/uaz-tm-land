@@ -471,7 +471,6 @@ function typeOfReq(req) {
     }
 
     //console.log(location.protocol + '//' + location.host + location.pathname);
-    //console.log(req);
 }
 // end
 
