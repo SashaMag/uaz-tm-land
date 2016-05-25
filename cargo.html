@@ -98,9 +98,9 @@
                         <select class="special-offer-buy-form__select-complectation_tradein" name="Карго, комплектация">
 
                             <option class="option-complectation-cargo" value="Выберите комплектацию">Выберите комплектацию</option>
-                            <!--#include virtual="/templates/auto/price_landing_select.php?car=218" -->
-
                             <!--#include virtual="/templates/auto/price_landing_select.php?car=203" -->
+
+                            <!--#include virtual="/templates/auto/price_landing_select.php?car=218" -->
                         </select>
                         <br>
 
@@ -275,9 +275,9 @@
                 <select class="special-offer-buy-form__select-complectation_" name="Карго, желаемая модель">
 
                     <option class="option-complectation-cargo" value="Выберите комплектацию">Выберите комплектацию</option>
-                    <!--#include virtual="/templates/auto/price_landing_select.php?car=218" -->
-
                     <!--#include virtual="/templates/auto/price_landing_select.php?car=203" -->
+
+                    <!--#include virtual="/templates/auto/price_landing_select.php?car=218" -->
 
                 </select>
                 <br>
@@ -322,12 +322,12 @@
         </div>
 
         <script type="text/javascript">
-            $.get("/templates/auto/price_landing.php?car=218", function (data) {
+            $.get("/templates/auto/price_landing.php?car=203", function (data) {
 
                 $(".special-offer__prices-block").append(data);
             });
 
-            $.get("/templates/auto/price_landing.php?car=203", function (data) {
+            $.get("/templates/auto/price_landing.php?car=218", function (data) {
 
                 $(".special-offer__prices-block").append(data);
             });
