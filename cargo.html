@@ -99,6 +99,8 @@
 
                             <option class="option-complectation-cargo" value="Выберите комплектацию">Выберите комплектацию</option>
                             <!--#include virtual="/templates/auto/price_landing_select.php?car=218" -->
+
+                            <!--#include virtual="/templates/auto/price_landing_select.php?car=203" -->
                         </select>
                         <br>
 
@@ -275,6 +277,8 @@
                     <option class="option-complectation-cargo" value="Выберите комплектацию">Выберите комплектацию</option>
                     <!--#include virtual="/templates/auto/price_landing_select.php?car=218" -->
 
+                    <!--#include virtual="/templates/auto/price_landing_select.php?car=203" -->
+
                 </select>
                 <br>
 
@@ -319,6 +323,11 @@
 
         <script type="text/javascript">
             $.get("/templates/auto/price_landing.php?car=218", function (data) {
+
+                $(".special-offer__prices-block").append(data);
+            });
+
+            $.get("/templates/auto/price_landing.php?car=203", function (data) {
 
                 $(".special-offer__prices-block").append(data);
             });
